@@ -9,7 +9,6 @@ class HeroDotaInfoEdit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final heroDotaInfoCtrl = Get.put(HeroDotaInfoController());
-    final heroDotaCtrl = Get.find<HeroDotaInfoController>();
     return Scaffold(
       body: Column(
         children: [
@@ -21,7 +20,7 @@ class HeroDotaInfoEdit extends StatelessWidget {
                 heroDotaInfoCtrl.nama.value = text;
               },
               decoration: InputDecoration(
-                hintText: heroDotaCtrl.nama.value,
+                hintText: heroDotaInfoCtrl.nama.value,
                 labelText: 'Nama',
                 enabledBorder: const OutlineInputBorder(),
                 focusedBorder: const OutlineInputBorder(),
@@ -38,7 +37,7 @@ class HeroDotaInfoEdit extends StatelessWidget {
               minLines: 1,
               maxLines: 5,
               decoration: InputDecoration(
-                hintText: heroDotaCtrl.deskripsi.value,
+                hintText: heroDotaInfoCtrl.deskripsi.value,
                 labelText: 'Deskripsi',
                 enabledBorder: const OutlineInputBorder(),
                 focusedBorder: const OutlineInputBorder(),
